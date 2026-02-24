@@ -12,7 +12,7 @@ body {
 
 h1 {
     font-size: 48px;
-    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 p {
@@ -20,17 +20,21 @@ p {
     opacity: 0.9;
 }
 
-button {
+.btn {
+    display: inline-block;
     padding: 12px 25px;
-    font-size: 16px;
-    border: none;
     border-radius: 25px;
     background-color: white;
     color: #2a5298;
-    cursor: pointer;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-button:hover {
+.btn:hover {
     background-color: #ddd;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
