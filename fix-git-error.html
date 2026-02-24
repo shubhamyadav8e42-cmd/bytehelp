@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How to Fix Not a Git Repository Error | ByteHelp</title>
+  <meta name="description" content="Step-by-step guide to fix the 'not a git repository' error in Git." />
+</head>
+<body>
+
+  <h1>How to Fix "Not a Git Repository" Error</h1>
+
+  <p>
+  If you see the error message "fatal: not a git repository", 
+  it means Git is not initialized in your current folder.
+  </p>
+
+  <h2>Why This Error Happens</h2>
+  <p>
+  Git commands only work inside a Git repository. 
+  If you run git push or git status in a normal folder, 
+  Git will show this error.
+  </p>
+
+  <h2>Step-by-Step Fix</h2>
+
+  <h3>1. Check Your Current Folder</h3>
+  <pre>
+  pwd
+  </pre>
+
+  <h3>2. Initialize Git (if not initialized)</h3>
+  <pre>
+  git init
+  </pre>
+
+  <h3>3. Add Remote Repository</h3>
+  <pre>
+  git remote add origin https://github.com/USERNAME/REPO.git
+  </pre>
+
+  <h3>4. Add and Commit Files</h3>
+  <pre>
+  git add .
+  git commit -m "Initial commit"
+  </pre>
+
+  <h3>5. Push to GitHub</h3>
+  <pre>
+  git push -u origin main
+  </pre>
+
+  <p>
+  After following these steps, your error should be resolved.
+  </p>
+
+  <hr>
+
+  <p><a href="index.html">Back to Home</a></p>
+
+</body>
+</html>
