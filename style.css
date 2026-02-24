@@ -1,17 +1,36 @@
 body {
-  background-color: #111;
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 100px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 100px 20px;
 }
 
 h1 {
-  color: cyan;
-  font-size: 40px;
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
 p {
-  font-size: 20px;
-  color: lightgray;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    color: #2a5298;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
 }
