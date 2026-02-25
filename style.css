@@ -1,40 +1,100 @@
+/* ===== Base Layout ===== */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: white;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 850px;
+  margin: 40px auto;
+  line-height: 1.7;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+  color: #222;
+
+  /* Fade in animation */
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-.container {
-    padding: 100px 20px;
+/* ===== Smooth Fade In ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== Headings Animation ===== */
+h1, h2 {
+  animation: slideDown 0.6s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 h1 {
-    font-size: 48px;
-    animation: fadeIn 2s ease-in-out;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-p {
-    font-size: 20px;
-    opacity: 0.9;
+h2 {
+  margin-top: 35px;
+  color: #333;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 25px;
-    background-color: white;
-    color: #2a5298;
-    text-decoration: none;
-    transition: 0.3s;
+/* ===== Navigation ===== */
+nav {
+  margin-bottom: 20px;
 }
 
-.btn:hover {
-    background-color: #ddd;
+nav a {
+  margin-right: 15px;
+  font-weight: bold;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* ===== Links Hover Effect ===== */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #005999;
+  transform: scale(1.05);
+}
+
+/* ===== Code Block Styling ===== */
+pre {
+  background: #eee;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+pre:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== Smooth Scroll ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Subtle Card Effect for Sections ===== */
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
 }
