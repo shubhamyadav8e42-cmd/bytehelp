@@ -40,4 +40,11 @@ a.btn:hover {
     background: #ff2a3c;
     transform: scale(1.05);
 }
+body {
+    transition: 0.3s ease;
+}
 
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
