@@ -1,32 +1,55 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>ByteHelp - Simple Tech Solutions</title>
     <link rel="stylesheet" href="style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BSN29XY9TV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BSN29XY9TV');
-</script>
 </head>
+
 <body>
-   <button id="darkModeToggle">🌙 Dark Mode</button>
-    <div class="container">
-        <h1>Welcome to ByteHelp</h1>
-<h2>Guides</h2>
-<a href="fix-git-error.html">Fix Not a Git Repository Error</a>
-        <p>
-ByteHelp is a simple tech guide platform for beginners. 
-Here you’ll find easy, step-by-step solutions for common coding problems, 
-GitHub errors, website setup, and practical tech tips — explained in plain language.
-No confusion. Just clear fixes.
-</p>
-        <a href="mailto:shubhamyadav8e42@gmail.com" class="btn">Contact Me</a>
-    </div>
+
+<button id="darkModeToggle">🌙 Dark Mode</button>
+
+<div class="container">
+    <h1>Welcome to ByteHelp</h1>
+
+    <h2>Guides</h2>
+    <a href="fix-git-error.html">Fix Not a Git Repository Error</a>
+
+    <p>
+        ByteHelp is a simple tech guide platform for beginners.
+        Here you'll find easy, step-by-step solutions for common coding problems,
+        GitHub errors, website setup, and practical tech tips.
+    </p>
+
+    <a href="mailto:shubhamyadav8e42@gmail.com" class="btn">Contact Me</a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const toggleButton = document.getElementById("darkModeToggle");
+
+    // Apply saved theme on load
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        toggleButton.textContent = "☀️ Light Mode";
+    }
+
+    toggleButton.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            toggleButton.textContent = "☀️ Light Mode";
+        } else {
+            localStorage.setItem("theme", "light");
+            toggleButton.textContent = "🌙 Dark Mode";
+        }
+    });
+
+});
+</script>
 
 </body>
 </html>
